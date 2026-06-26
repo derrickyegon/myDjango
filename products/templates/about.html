@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<style>
+    .about-hero {
+        position: relative;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background-image: linear-gradient(rgba(40, 35, 30, 0.75), rgba(40, 35, 30, 0.75)),
+                       url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .about-hero p {
+        font-size: 18px;
+        max-width: 700px;
+        opacity: 0.95;
+    }
+
+    .who-we-are {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 60px 80px;
+        gap: 50px;
+    }
+
+    .who-we-are .col {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .who-we-are img {
+        width: 100%;
+        border-radius: 8px;
+        display: block;
+    }
+
+    .who-we-are h2 {
+        color: #2952d9;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .who-we-are p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+        margin-bottom: 18px;
+    }
+</style>
+
+<div class="about-hero">
+    <h1>About Us</h1>
+    <p>Building innovative digital solutions that empower businesses and individuals.</p>
+</div>
+
+<div class="who-we-are">
+    <div class="col">
+        <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?q=80&w=1200&auto=format&fit=crop" alt="Team collaborating with sticky notes">
+    </div>
+    <div class="col">
+        <h2>Who We Are</h2>
+        <p>We are a passionate team of developers, designers, and innovators dedicated to creating reliable and modern digital solutions. Our expertise spans web development, mobile applications, cloud technologies, and digital transformation.</p>
+        <p>Since our establishment, we have successfully partnered with businesses of all sizes, helping them improve efficiency, increase productivity, and deliver exceptional customer experiences through technology.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa dolor, labore sint, non saepe ea error impedit recusandae quod et unde sed<br> culpa quidem blanditiis eligendi voluptates debitis officia ad consequatur! Dignissimos commodi quae rerum sit vero mollitia officiis.</p>
+    </div>
+</div>
+{% endblock %}

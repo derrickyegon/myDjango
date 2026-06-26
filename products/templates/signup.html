@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+Sign Up
+{% endblock %}
+{% block content %}
+    <div class="signup-card">
+        <h2>Create Account</h2>
+        
+
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+
+            <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your full name" name="fullname" required>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password" required>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Confirm password" name="confirm_password" required>
+            </div>
+
+            <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
+
+            <button type="submit" class="btn-signup">Sign Up</button>
+        </form>
+
+        <p class="login-link">
+            Already have an account? <a href="{% url 'login' %}">Login</a>
+        </p>
+    </div>
+{% endblock %}

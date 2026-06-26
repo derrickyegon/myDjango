@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
+
+</head>
+<body>
+    <nav style="display: flex; justify-content: left; align-items: center; padding: 10px;">
+        <h1 style="font-family: sans-serif;">MyShop</h1>
+        <ul style="display: flex; padding: 10px; list-style: none;">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'signup' %}">SignUp</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
